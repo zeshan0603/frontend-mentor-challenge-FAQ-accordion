@@ -23,7 +23,7 @@
 
 .card {
     background-color: white;
-    border-radius: 25px;
+    border-radius: 10px;
     color: hsl(292, 42%, 14%);
     margin: 0 auto;
     width: 45%;
@@ -55,6 +55,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
 }
 
 .card span:hover {
@@ -89,8 +90,12 @@
     padding-top: 5px;
 }
 
-.para--1.active {
-    max-height: 90px;
+.para.active {
+    max-height: clamp(15.625rem, calc(15.625rem + ((1vw - 0.2rem) * -10)), 5.625rem);
+}
+
+/* .para--1.active {
+    max-height: clamp(9.375rem, calc(9.375rem + ((1vw - 0.2rem) * -3.75)), 5.625rem);
 }
 
 .para--2.active {
@@ -103,9 +108,9 @@
 
 .para--4.active {
     max-height: 90px;
-}
+} */
 
-/* @media (max-width:1440px) {
+@media (max-width:1440px) {
     .card {
         width: 55%;
     }
@@ -115,4 +120,34 @@
     .card {
         width: 60%;
     }
-} */
+}
+
+@media (max-width:768px) {
+    .card {
+        width: 75%;
+    }
+
+    .card span img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .card svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+
+@media (max-width:540px) {
+    .card {
+        width: 85%;
+    }
+}
+
+
+@media (max-width:360px) {
+    .card {
+        width: 95%;
+    }
+}
