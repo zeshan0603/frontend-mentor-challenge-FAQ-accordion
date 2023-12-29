@@ -138,13 +138,11 @@
     }
 }
 
-
 @media (max-width:540px) {
     .card {
         width: 85%;
     }
 }
-
 
 @media (max-width:360px) {
     .card {
